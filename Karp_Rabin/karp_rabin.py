@@ -4,12 +4,12 @@ def Hash(hashArray, hashArrayLength):
     for i in hashArray:
         result += ord(i) * pow(2, hashArrayLength - pos - 1)
         pos += 1
-    return result%99959
+    return result % 99959
 
 
 def reHash(firstChar, lastChar, hashValue, hashArrayLength):
     result = 2 * (hashValue - ord(firstChar) * pow(2, hashArrayLength - 1)) + ord(lastChar)
-    return result%99959
+    return result % 99959
 
 
 def Karp_Rabin(searchPattern, searchString):
@@ -21,11 +21,12 @@ def Karp_Rabin(searchPattern, searchString):
     pos = 1
     while pos < len(searchString) - len(searchPattern):
         hss = reHash(searchString[pos - 1], searchString[pos + len(searchPattern) - 1], hss, len(searchPattern))
-        if hsp == hss and searchString[pos:pos+len(searchPattern)] == searchPattern:
+        if hsp == hss and searchString[pos:pos + len(searchPattern)] == searchPattern:
             print("Trùng tại vị trí " + str(pos))
-            print(searchString[pos:pos+len(searchPattern)])
+            print(searchString[pos:pos + len(searchPattern)])
         pos += 1
 
-import testData
-Karp_Rabin(testData.Search_pattern, testData.Search_String)
 
+import testData
+
+Karp_Rabin(testData.Search_pattern, testData.Search_String)
