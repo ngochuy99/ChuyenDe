@@ -17,7 +17,7 @@ def Horspool(pattern, pattern_len, string, string_len):
     while j <= string_len - pattern_len:
         c = string[j + pattern_len - 1]
         if string[j:j + pattern_len] == pattern:
-            print("Tìm thấy pattern "+string[j:j + pattern_len]+" tại vị trí:" + str(j))
+            print("Tìm thấy từ khóa "+string[j:j + pattern_len]+" tại vị trí:" + str(j))
         j += BmBc[ord(c)]
 
 

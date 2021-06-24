@@ -14,7 +14,7 @@ def QuickSearch(pattern, pattern_len, string, string_len):
     preQsBc(pattern, pattern_len, qsBc)
     while j < string_len - pattern_len:
         if pattern == string[j:j + pattern_len]:
-            print("Tìm thấy pattern "+string[j:j + pattern_len]+" tại vị trí:" + str(j))
+            print("Tìm thấy từ khóa "+string[j:j + pattern_len]+" tại vị trí:" + str(j))
         j += qsBc[ord(string[j + pattern_len])]
 
 from testData import *
