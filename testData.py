@@ -32,3 +32,5 @@ Search_String = "Lorem Ipsum is simply dummy text of the printing and typesettin
                 "looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, " \
                 "injected humour, or non-characteristic words etc. "
 Search_pattern = "Lorem"
+exp_string = "ASSDJ1AVASSSDJAVASC3KSDFJL"
+exp_pattern = "SSDJ"

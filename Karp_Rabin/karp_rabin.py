@@ -22,11 +22,10 @@ def Karp_Rabin(searchPattern, searchString):
     while pos < len(searchString) - len(searchPattern):
         hss = reHash(searchString[pos - 1], searchString[pos + len(searchPattern) - 1], hss, len(searchPattern))
         if hsp == hss and searchString[pos:pos + len(searchPattern)] == searchPattern:
-            print("Trùng tại vị trí " + str(pos))
-            print(searchString[pos:pos + len(searchPattern)])
+            print("Tìm thấy từ khóa " + searchString[pos:pos + len(searchPattern)] + " tại vị trí:" + str(pos))
         pos += 1
 
 
-import testData
-
-Karp_Rabin(testData.Search_pattern, testData.Search_String)
+Search_String = "ASSDJ1AVASSSDJAV"
+Search_pattern = "SSDJ"
+Karp_Rabin(Search_pattern, Search_String)
