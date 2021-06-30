@@ -19,13 +19,9 @@ def KnuthMorrisPratt(pattern, pattern_len, string, string_len):
     preKMP(pattern, pattern_len, nextKMP)
     i = 0
     j = 0
-    print(nextKMP)
     while i < string_len:
-        print("i = " + str(i) + ";j = " + str(j))
-        print(string[i] + " " + pattern[j])
         while j > -1 and pattern[j] != string[i]:
             j = nextKMP[j]
-            print("i = " + str(i) + ";j = " + str(j))
         j += 1
         i += 1
         if j >= pattern_len:
