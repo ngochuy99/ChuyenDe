@@ -8,7 +8,6 @@ def preQsBc(x, m, qsBc):
         qsBc[ord(x[i])] = m - i
         i += 1
 
-
 def QuickSearch(pattern, pattern_len, string, string_len):
     j, qsBc = 0, [0] * 256
     preQsBc(pattern, pattern_len, qsBc)
@@ -18,4 +17,6 @@ def QuickSearch(pattern, pattern_len, string, string_len):
         j += qsBc[ord(string[j + pattern_len])]
 
 from testData import *
+Search_pattern = "asddadasddd"
+Search_String = "awasdakdhasddadasdddkalwd"
 QuickSearch(Search_pattern, len(Search_pattern), Search_String, len(Search_String))

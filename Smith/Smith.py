@@ -19,6 +19,7 @@ def preqsBc(pattern, pattern_len, qsBc):
         qsBc[ord(pattern[i])] = pattern_len - i
         i += 1
 
+
 def Smith(pattern, pattern_len, string, string_len):
     BmBc = [0] * 256
     qsBc = [0] * 256
@@ -31,7 +32,6 @@ def Smith(pattern, pattern_len, string, string_len):
         j += max(BmBc[ord(string[j + pattern_len-1])], qsBc[ord(string[j + pattern_len])])
 
 
-from testData import *
-# Search_pattern = "GCAGAGAG"
-# Search_String = "GCATCGCAGAGAGTATACAGTACG"
-Smith(Search_pattern, len(Search_pattern), Search_String, len(Search_String))
+pattern = "asddadasddd"
+string = "awasdakdhasddadasdddkalwd"
+Smith(pattern, len(pattern), string, len(string))

@@ -17,14 +17,18 @@ def Raita(pattern, pattern_len, string, string_len):
     preBmBc(pattern, pattern_len, BmBc)
     j = 0
     while j < string_len - pattern_len:
-        if pattern[pattern_len-1] == string[j + pattern_len-1] and pattern[0] == string[j] and pattern[
+        print(j)
+        print("Cuối:" + pattern[pattern_len-1] +" - "+string[j + pattern_len-1])
+        print("Đầu:" + pattern[0] + " - " + string[j])
+        print("Giữa:" + pattern[int(pattern_len / 2)] + " - " + string[j + pattern_len - 1])
+        if pattern[pattern_len-1] == string[int(j + pattern_len / 2)] and pattern[0] == string[j] and pattern[
             int(pattern_len / 2)] == string[int(j + pattern_len / 2)] and pattern[1:pattern_len - 1] == string[
                                                                                                         j + 1:j + pattern_len - 1]:
             print("Tìm thấy từ khóa " + string[j:j + pattern_len] + " tại vị trí:" + str(j))
         j += BmBc[ord(string[j + pattern_len - 1])]
 
 
-# Search_pattern = "GCAGAGAG"
-# Search_String = "GCATCGCAGAGAGTATACAGTACG"
+Search_pattern = "asddadasddd"
+Search_String = "awasdakdhasddadasdddkalwd"
 
 Raita(Search_pattern, len(Search_pattern), Search_String, len(Search_String))

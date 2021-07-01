@@ -21,6 +21,6 @@ def Horspool(pattern, pattern_len, string, string_len):
         j += BmBc[ord(c)]
 
 
-from testData import *
-
+Search_pattern = "asddadasddd"
+Search_String = "awasdakdhasddadasdddkalwd"
 Horspool(Search_pattern, len(Search_pattern), Search_String, len(Search_String))

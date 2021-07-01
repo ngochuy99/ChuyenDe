@@ -7,6 +7,8 @@ def preBmBc(pattern, pattern_len, BmBc):
     while i < pattern_len - 1:
         BmBc[ord(pattern[i])] = pattern_len - i - 1
         i += 1
+    for x in "asdl":
+        print(BmBc[ord(x)])
 
 
 def TunedBoyerMoore(pattern, pattern_len, string, string_len):
@@ -18,10 +20,8 @@ def TunedBoyerMoore(pattern, pattern_len, string, string_len):
     while j<pattern_len:
         string+=pattern[pattern_len-1]
         j+=1
-
     j = 0
     while j < string_len:
-        string[j+pattern_len-1]
         k = BmBc[ord(string[j + pattern_len - 1])]
         while k != 0:
             j += k
@@ -35,6 +35,6 @@ def TunedBoyerMoore(pattern, pattern_len, string, string_len):
         j += shift
 
 
-Search_pattern = "GCAGAGAG"
-Search_String = "GCATCGCAGAGAGTATACAGTACG"
+Search_pattern = "asddadasddd"
+Search_String = "awasdakdhasddadasdddkalwd"
 TunedBoyerMoore(Search_pattern, len(Search_pattern), Search_String, len(Search_String))
